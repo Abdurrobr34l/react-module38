@@ -6,6 +6,30 @@
 
 .title {
   font-size: 35px;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   color: #05df72;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+
+  & > * {
+    padding: 20px;
+    border: 1px solid coral;
+    border-radius: 12px;
+  }
+
+  & p {
+    margin: 0;
+  }
+}
+.countryFlex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.flag {
+  width: 80px !important;
 }
