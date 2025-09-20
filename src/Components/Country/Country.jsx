@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-const Country = ({ country, handleVisitedCountry }) => {
+const Country = ({ country, handleVisitedCountry, handleVisitedCountryFlag }) => {
 
   const [visited, setVisited] = useState(false);
   const handleVisit = () => {
     setVisited(!visited);
     handleVisitedCountry(country.name.common);
-    // handleVisitedCountry(country);
   };
 
   if (country.name.common === "Israel") return null;
@@ -24,7 +23,9 @@ const Country = ({ country, handleVisitedCountry }) => {
         <button onClick={handleVisit}>
           {visited ? "Visited" : "Not Visited"}
         </button>
-        {/* <button></button> */}
+        <button onClick={() => { handleVisitedCountryFlag(country.flags.flags.svg) }}>
+          Country Flag
+        </button>
       </div>
     </>
   );
