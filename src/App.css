@@ -5,31 +5,41 @@
 }
 
 .title {
-  font-size: 35px;
+  font-size: 25px;
+  text-align: center;
   /* text-decoration: underline; */
   color: #05df72;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
 
   & > * {
     padding: 20px;
     border: 1px solid coral;
     border-radius: 12px;
+    transition: background-color linear 0.23s;
   }
 
   & p {
-    margin: 0;
+    margin: 6px 0;
+    font-weight: 700;
   }
 }
-.countryFlex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
 .flag {
-  width: 80px !important;
+  width: 150px !important;
+  height: 80px !important;
+  object-fit: cover;
+}
+
+button {
+  margin-top: 10px;
+}
+
+.visited {
+  color: #000;
+  background-color: lightgreen;
+  border: transparent;
 }
