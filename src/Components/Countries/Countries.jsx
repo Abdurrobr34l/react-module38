@@ -36,12 +36,14 @@ export default function AllCountries({ countriesPromise }) {
         </ol>
 
         {/* Visited Countries Flag */}
-        <ol className="listStyleNone">
-          {visitedCountryFlag.map((countryFlag) => (
+        <ol>
+          {
+          visitedCountryFlag.map((countryFlag, index) => (
             <li>
-              <img src={countryFlag} className="flag2" />
+              <img src={countryFlag} key={index} className="flag2" />
             </li>
-          ))}
+          ))
+          }
         </ol>
       </div>
 
